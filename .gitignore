@@ -4,3 +4,4 @@ node_modules
 .env.development
 build
 .firebase
+firebase-debug.log
