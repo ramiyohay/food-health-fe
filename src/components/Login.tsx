@@ -24,10 +24,7 @@ function Login() {
       console.log(res);
     };
 
-    // call the function
-    fetchData()
-      // make sure to catch any error
-      .catch(console.error);
+    fetchData().catch(console.error);
   }, []); // when ending with [], it runs as ComponentDidMount
 
   const handleClick = () => {
