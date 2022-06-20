@@ -1,6 +1,6 @@
 node_modules
 .env
-.env.produciton
+.env.production
 .env.development
 build
 .firebase

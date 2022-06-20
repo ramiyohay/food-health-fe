@@ -3,7 +3,7 @@ import { InputText } from "primereact/inputtext";
 import { Button } from "primereact/button";
 import { Fieldset } from "primereact/fieldset";
 import { BlockUI } from "primereact/blockui";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { preProcessFile } from "typescript";
 
 function Login() {
@@ -12,8 +12,14 @@ function Login() {
   const [loading1, setLoading1] = useState(false);
   const [blockedPanel, setBlockedPanel] = useState<boolean>(false);
 
+  useEffect(() => {
+    fetch("https://food-health-be.herokuapp.com/api/ping")
+      .then((response) => response.json())
+      .then((data) => console.log(data));
+  }, []);
+
   const handleClick = () => {
-    console.log(password);
+    //console.log(password);
     setLoading1(true);
     setBlockedPanel(true);
   };
@@ -26,7 +32,7 @@ function Login() {
       >
         <Fieldset
           legend={
-            "(Login " +
+            "Login (" +
             process.env.NODE_ENV +
             " " +
             process.env.REACT_APP_APP_VER +
