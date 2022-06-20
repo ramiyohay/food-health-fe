@@ -13,10 +13,22 @@ function Login() {
   const [blockedPanel, setBlockedPanel] = useState<boolean>(false);
 
   useEffect(() => {
-    fetch("https://food-health-be.herokuapp.com/api/ping")
-      .then((response) => response.json())
-      .then((data) => console.log(data));
-  }, []);
+    // declare the data fetching function
+    const fetchData = async () => {
+      const res = await fetch("https://food-health-be.herokuapp.com/api/ping", {
+        method: "GET",
+        mode: "cors",
+      }); //.then((response) => response.json())
+      //.then((data) => console.log(data));;
+
+      console.log(res);
+    };
+
+    // call the function
+    fetchData()
+      // make sure to catch any error
+      .catch(console.error);
+  }, []); // when ending with [], it runs as ComponentDidMount
 
   const handleClick = () => {
     //console.log(password);

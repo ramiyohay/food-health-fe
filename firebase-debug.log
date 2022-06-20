@@ -1,0 +1,36 @@
+[debug] [2022-06-20T12:11:01.311Z] ----------------------------------------------------------------------
+[debug] [2022-06-20T12:11:01.313Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ramiy\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-06-20T12:11:01.313Z] CLI Version:   11.1.0
+[debug] [2022-06-20T12:11:01.313Z] Platform:      win32
+[debug] [2022-06-20T12:11:01.313Z] Node Version:  v16.15.0
+[debug] [2022-06-20T12:11:01.314Z] Time:          Mon Jun 20 2022 15:11:01 GMT+0300 (שעון ישראל (קיץ))
+[debug] [2022-06-20T12:11:01.314Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-06-20T12:11:01.357Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-06-20T12:11:01.358Z] > authorizing via signed-in user (ramiyohay1@gmail.com)
+[debug] [2022-06-20T12:11:01.358Z] [iam] checking project food-health-fe for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-06-20T12:11:01.359Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/food-health-fe:testIamPermissions [none]
+[debug] [2022-06-20T12:11:01.359Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/food-health-fe:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-06-20T12:11:01.881Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/food-health-fe:testIamPermissions 200
+[debug] [2022-06-20T12:11:01.881Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/food-health-fe:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-06-20T12:11:01.882Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/food-health-fe [none]
+[debug] [2022-06-20T12:11:02.387Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/food-health-fe 200
+[debug] [2022-06-20T12:11:02.387Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/food-health-fe {"projectId":"food-health-fe","projectNumber":"761321902183","displayName":"food-health-fe","name":"projects/food-health-fe","resources":{"hostingSite":"food-health-fe"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'food-health-fe'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2022-06-20T12:11:02.390Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/food-health-fe [none]
+[debug] [2022-06-20T12:11:02.804Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/food-health-fe 200
+[debug] [2022-06-20T12:11:02.804Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/food-health-fe {"projectId":"food-health-fe","projectNumber":"761321902183","displayName":"food-health-fe","name":"projects/food-health-fe","resources":{"hostingSite":"food-health-fe"},"state":"ACTIVE"}
+[debug] [2022-06-20T12:11:02.806Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/761321902183/sites/food-health-fe/versions [none]
+[debug] [2022-06-20T12:11:02.807Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/761321902183/sites/food-health-fe/versions {"config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2022-06-20T12:11:04.329Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/761321902183/sites/food-health-fe/versions 200
+[debug] [2022-06-20T12:11:04.329Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/761321902183/sites/food-health-fe/versions {"name":"projects/761321902183/sites/food-health-fe/versions/502d8350cbec2a0f","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[food-health-fe]: beginning deploy... 
+[info] i  hosting[food-health-fe]: found 25 files in build 
+[debug] [2022-06-20T12:11:04.344Z] [hosting] uploading with 200 concurrency
+[debug] [2022-06-20T12:11:04.482Z] [hosting] hash cache [YnVpbGQ] stored for 25 files
+[debug] [2022-06-20T12:11:04.483Z] [hosting][hash queue][FINAL] {"max":132,"min":3,"avg":19.4,"active":0,"complete":25,"success":25,"errored":0,"retried":0,"total":25,"elapsed":138}
+[debug] [2022-06-20T12:11:04.483Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/761321902183/sites/food-health-fe/versions/502d8350cbec2a0f:populateFiles [none]
+[debug] [2022-06-20T12:11:04.483Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/761321902183/sites/food-health-fe/versions/502d8350cbec2a0f:populateFiles {"files":{"/favicon.ico":"eae62e993eb980ec8a25058c39d5a51feab118bd2100c4deebb2a9c158ec11f9","/logo192.png":"3ee59515172ee198f3be375979df15ac5345183e656720a381b8872b2a39dc8b","/logo512.png":"ee7e2f3fdb8209c4b6fd7bef6ba50d1b9dba30a25bb5c3126df057e1cb6f5331","/manifest.json":"5c997de1364b8be939319fa9209abd77f2caf7f8844999a9e2e9173f844e7840","/robots.txt":"b2090cf9761ef60aa06e4fab97679bd43dfa5e5df073701ead5879d7c68f1ec5","/asset-manifest.json":"077a99de3aafd488b207ae76c7765af8f8f861ef67d756d50744868c9f655871","/service-worker.js":"5346ecee4cea5027b2586f38f7f9d4101d4820589dd77b6a63b7f5b16f8e0b73","/static/css/main.1f221424.chunk.css":"c82097cd75298a65c30a0b788cacfd5f1fa337ba94a451c77b4c78277c64340f","/index.html":"6f6fff9f1e67a259528bf013569c45ecdaceca84fb6a509cc311a02eec0ec3ea","/precache-manifest.30bb9a26e69a73b93749345a55e31bf6.js":"e2577a5de77d8025539cd0d1474cdae3d4d56f946e5c7dece90e0ddc6c094aa2","/static/css/main.1f221424.chunk.css.map":"0d30adc5662d3a147951a43921090f05c2527c4b1b322c584f0a847a90fd5627","/static/js/1.aa1ef92c.chunk.js":"f031a357c309f5d59a52414b22ad23786e89bbbb3ddc94dc06b625953557b098","/static/js/1.aa1ef92c.chunk.js.map":"9eba0a599e04fa70ec8d4df8352baef818b3980474aac657a3878093a083016b","/static/js/main.ced78598.chunk.js":"c24b9b1944731b6cd13315437d129225ea0c17f63ec0c0290b0d281d2c9af598","/static/js/runtime~main.3ea3b0ff.js":"db2caaa3f14124e967aa241af140fbb4b68a7e4933bf7bbd361a8f2a196692a0","/static/js/main.ced78598.chunk.js.map":"24f7273e153321fdb23e96d3ca37960d31ee12da65e2e234e75362b808d603fd","/static/js/runtime~main.3ea3b0ff.js.map":"bc7956e03bd75d4421a329cf13c9714f6417fd25c838587e2b6898a1241e337f","/static/media/primeicons.943c3597.woff":"458000bc510f1f7e665053c335684094fa3246ca68d62645a12e6bc01f12487c","/static/media/primeicons.b29a888f.ttf":"02c406feb9b0f8ec27350f5108ccf48da8bdc53951a2e0148cacf4d3cd70a84e","/static/media/primeicons.e01fd413.eot":"2829259aa1369146f0830232e88938c06ccf01b679d0725de5f8b9fe09dcd984","/static/css/2.56780641.chunk.css":"314bfeaea26824c33ef92d9f3c7b538012356d96042328a513c69f3f38987fdd","/static/js/2.2cd4fc3a.chunk.js":"d40380c0099f37a5883f8284324f46b9dcb93af9c02ce9c2a5991327dbcf8051","/static/media/primeicons.64b5d470.svg":"89997ea4477b743de54d525fc930e8fb23e656ac3b9353bec70985d06994fa0c","/static/css/2.56780641.chunk.css.map":"2307c29414f044e4f3f718fec45d97654de04d3468c7b91c8e4e6f432a9076ad","/static/js/2.2cd4fc3a.chunk.js.map":"b6941934b4bea52ddfd512e626776065019b7a8cad5f08bdc797b6a14e68eebd"}}
